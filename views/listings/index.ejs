@@ -6,22 +6,48 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
     }
 
     .filter{
-        margin-right: 2rem;
+        flex: 0 0 auto;
+        min-width: 8rem;
+        padding: 0.8rem 1rem;
+        border-radius: 1rem;
+        border: 1px solid #e1e1e1;
+        background: #ffffff;
         text-align: center;
-        margin-top: 2rem;
-        opacity: 0.7;
+        margin-top: 0.5rem;
+        opacity: 0.8;
+        transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .filter:hover {
         opacity: 1;
         cursor: pointer;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
 
     .filter p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .filter div {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        background-color: #f8f8f8;
     }
 
     .tax-info {
@@ -29,13 +55,27 @@
     }
 
     .tax-toggle {
-        border: 1px solid black;
+        flex: 0 0 auto;
+        border: 1px solid #000;
         border-radius: 1rem;
-        height: 3.25rem;
-        padding: 1rem;
-        margin-left: 3rem;
+        padding: 0.85rem 1rem;
+        margin-top: 0.5rem;
         display: flex;
         align-items: center;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+        #filters {
+            flex-wrap: nowrap;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .tax-toggle {
+            min-width: 16rem;
+            margin-left: 0;
+        }
     }
 </style>
 

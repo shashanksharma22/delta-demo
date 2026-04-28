@@ -11,7 +11,7 @@ body{
 
 /* Navbar */
 .navbar{
-    height: 5rem;
+    min-height: 5rem;
     background-color: white;
 }
 
