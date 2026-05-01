@@ -96,10 +96,13 @@ body{
 
 .show-img{
     height: 30vh;
+    min-height: 200px;
 }
 
 .btns{
     display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
 /* .show-card{
@@ -110,5 +113,5 @@ body{
 /* Map */
 #map {
     height: 400px;
-    width: 80vh;
+    width: 100%;
 }
